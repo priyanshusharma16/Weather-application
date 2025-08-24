@@ -33,25 +33,23 @@ async function getWeather() {
       // Weather icon selection
       switch (data.weather[0].main) {
         case "Clouds":
-          weatherIcon.src = "assets/cloud.png";
+          weatherIcon.src = "cloud.png";
           break;
         case "Clear":
-          weatherIcon.src = "assets/clear.png";
+          weatherIcon.src = "clear.png";
           break;
         case "Rain":
-          weatherIcon.src = "assets/rain.png";
-          break;
         case "Drizzle":
-          weatherIcon.src = "assets/rain.png";
+          weatherIcon.src = "rain.png";
           break;
         case "Mist":
-          weatherIcon.src = "assets/mist.png";
+          weatherIcon.src = "mist.png";
           break;
         case "Snow":
-          weatherIcon.src = "assets/snow.png";
+          weatherIcon.src = "snow.png";
           break;
         default:
-          weatherIcon.src = "assets/clear.png";
+          weatherIcon.src = "clear.png";
       }
 
       errorBox.classList.add("hide");
