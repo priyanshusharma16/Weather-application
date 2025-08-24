@@ -30,22 +30,25 @@ async function getWeather() {
       humidityEl.innerText = data.main.humidity + "%";
       windEl.innerText = data.wind.speed + " km/h";
 
+      // Convert main weather to lowercase for safe comparison
+      const weatherMain = data.weather[0].main.toLowerCase();
+
       // Weather icon selection
-      switch (data.weather[0].main) {
-        case "Clouds":
+      switch (weatherMain) {
+        case "clouds":
           weatherIcon.src = "cloud.png";
           break;
-        case "Clear":
+        case "clear":
           weatherIcon.src = "clear.png";
           break;
-        case "Rain":
-        case "Drizzle":
+        case "rain":
+        case "drizzle":
           weatherIcon.src = "rain.png";
           break;
-        case "Mist":
+        case "mist":
           weatherIcon.src = "mist.png";
           break;
-        case "Snow":
+        case "snow":
           weatherIcon.src = "snow.png";
           break;
         default:
